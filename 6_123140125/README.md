@@ -13,15 +13,15 @@ Aplikasi **News Reader** adalah aplikasi mobile yang menampilkan daftar berita d
 
 ## ✨ Fitur Utama
 
-- 🔍 Fetch berita dari Public API (NewsAPI / JSONPlaceholder)
-- 📰 Menampilkan list artikel (title, description, dan image)
-- 📖 Detail screen saat artikel diklik
-- 🔄 Pull to refresh functionality
-- ⚡ State handling:
+- Fetch berita dari Public API (NewsAPI / JSONPlaceholder)
+- Menampilkan list artikel (title, description, dan image)
+- Detail screen saat artikel diklik
+- Pull to refresh functionality
+- State handling:
   - Loading
   - Success
   - Error
-- 🏗️ Menggunakan Repository Pattern untuk API calls
+- Menggunakan Repository Pattern untuk API calls
 
 ---
 
