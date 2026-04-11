@@ -49,7 +49,7 @@ Aplikasi **News Reader** adalah aplikasi mobile yang menampilkan daftar berita d
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/username/news-reader.git
+   git clone https://github.com/rdtngh/PraktikumPAM_123140125.git
 
 2. Buka project di Android Studio
 3. Sync Gradle
