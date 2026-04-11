@@ -1,71 +1,73 @@
-# Tugas 5 Pengembangan Aplikasi Mobile RB 
+# Tugas 6 Pengembangan Aplikasi Mobile RB 
 
 **Nama:** Raditya Alrasyid Nugroho  
 **NIM:** 123140125  
 **Kelas:** Pengembangan Aplikasi Mobile RB
 
 ---
-# 📱 Notes App (Android)
+# 📰 News Reader App
 
-## Deskripsi
-Aplikasi ini merupakan aplikasi pencatatan sederhana berbasis Android.  
+Aplikasi **News Reader** adalah aplikasi mobile yang menampilkan daftar berita dari public API. Aplikasi ini mendukung fitur refresh, detail berita, serta penanganan state seperti loading, success, dan error.
+
 ---
 
 ## ✨ Fitur Utama
 
-### 1. Bottom Navigation (3 Tab)
-- Notes → menampilkan daftar catatan  
-- Favorites → menampilkan catatan favorit  
-- Profile → halaman profil pengguna  
-
-### 2. Note List → Note Detail
-- User dapat memilih catatan dari daftar  
-- Data dikirim menggunakan noteId ke halaman detail  
-
-### 3. Tambah Catatan (FAB)
-- Menggunakan Floating Action Button (FAB)  
-- Mengarahkan ke halaman Add Note  
-
-### 4. Back Navigation
-- Navigasi kembali berjalan dengan baik di semua screen  
-- Tidak terjadi error saat berpindah halaman  
-
-### 5. Edit Note
-- User dapat mengedit catatan  
-- Data dikirim menggunakan noteId ke halaman edit  
+- 🔍 Fetch berita dari Public API (NewsAPI / JSONPlaceholder)
+- 📰 Menampilkan list artikel (title, description, dan image)
+- 📖 Detail screen saat artikel diklik
+- 🔄 Pull to refresh functionality
+- ⚡ State handling:
+  - Loading
+  - Success
+  - Error
+- 🏗️ Menggunakan Repository Pattern untuk API calls
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
-- Kotlin  
-- Android Studio  
-- Jetpack Navigation Component  
-- Material Design  
+
+- Kotlin / Java
+- Retrofit / Volley
+- Glide / Picasso
+- RecyclerView
+- MVVM Architecture (opsional)
+- Repository Pattern
 
 ---
 
-## ▶️ Cara Menjalankan Project
+---
 
-1. Buka project di Android Studio  
-2. Tunggu proses build (Gradle) selesai  
-3. Pilih device (emulator / HP)  
-4. Klik tombol Run ▶️  
+## 🔗 API yang Digunakan
+
+- https://newsapi.org/
+- https://jsonplaceholder.typicode.com/
 
 ---
+
+## 🚀 Cara Menjalankan Aplikasi
+
+1. Clone repository:
+   ```bash
+   git clone https://github.com/username/news-reader.git
+
+2. Buka project di Android Studio
+3. Sync Gradle
+4. Jalankan aplikasi di emulator atau device
 
 ## 📸 Screenshot Aplikasi
 
-### Notes Screen
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/14cd46b6-7491-4741-a456-ced23a183866" />
+### Success
+<img width="1920" height="1080" alt="Screenshot (664)" src="https://github.com/user-attachments/assets/6f5aec70-aa87-4a2a-b7d7-3a80b43d23dc" />
 
-### Add Note Screen
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8da0cd8-a3a4-4456-bc8b-e25158b80c38" />
+### Loading
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/985e035c-e995-409e-a695-bcad411d0e4f" />
 
-### Favourite Note Screen
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ce7cb91a-9fab-4032-8845-a6375a09c537" />
+### Error
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c20d4b5f-e935-44ae-8a28-88a13d67e652" />
 
-### Bottom Navigation
-<img width="607" height="292" alt="image" src="https://github.com/user-attachments/assets/cf2d25a4-9150-4adb-a389-801a99610fec" />
+### Refresh
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/40a4e9db-6347-41f9-9e82-d5cd9c1b83fd" />
 
-## Link Video Demonstrasi
-https://drive.google.com/file/d/1J_F_rwHSkwo4stz-pJ57wIAZ88ecycv9/view?usp=sharing
+
+
