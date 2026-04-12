@@ -266,6 +266,20 @@ fun NewsItem(article: NewsPost, onClick: () -> Unit) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewsDetailScreen(article: NewsPost, onBack: () -> Unit) {
+    val scrollState = rememberScrollState()
+    
+    // Hitung alpha berdasarkan scroll (akan menghilang perlahan setelah scroll 100px)
+    val titleAlpha by remember {
+        derivedStateOf {
+            val threshold = 100f
+            if (scrollState.value > threshold) {
+                (1f - (scrollState.value - threshold) / 100f).coerceIn(0f, 1f)
+            } else {
+                1f
+            }
+        }
+    }
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -284,7 +298,13 @@ fun NewsDetailScreen(article: NewsPost, onBack: () -> Unit) {
             containerColor = Color.Transparent,
             topBar = {
                 TopAppBar(
-                    title = { Text("Detail Berita", color = Color.White, fontWeight = FontWeight.Bold) },
+                    title = { 
+                        Text(
+                            "Detail Berita", 
+                            color = Color.White.copy(alpha = titleAlpha), 
+                            fontWeight = FontWeight.Bold 
+                        ) 
+                    },
                     navigationIcon = {
                         IconButton(
                             onClick = onBack,
@@ -304,7 +324,7 @@ fun NewsDetailScreen(article: NewsPost, onBack: () -> Unit) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .verticalScroll(rememberScrollState())
+                    .verticalScroll(scrollState)
             ) {
                 AsyncImage(
                     model = article.getSafeImageUrl(),
