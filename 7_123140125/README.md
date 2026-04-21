@@ -1,71 +1,72 @@
-# Tugas 5 Pengembangan Aplikasi Mobile RB 
+# Tugas 7 Pengembangan Aplikasi Mobile RB 
 
 **Nama:** Raditya Alrasyid Nugroho  
 **NIM:** 123140125  
 **Kelas:** Pengembangan Aplikasi Mobile RB
 
----
-# 📱 Notes App (Android)
+# 📱 Notes App - Praktikum Minggu 7
 
-## Deskripsi
-Aplikasi ini merupakan aplikasi pencatatan sederhana berbasis Android.  
----
-
-## ✨ Fitur Utama
-
-### 1. Bottom Navigation (3 Tab)
-- Notes → menampilkan daftar catatan  
-- Favorites → menampilkan catatan favorit  
-- Profile → halaman profil pengguna  
-
-### 2. Note List → Note Detail
-- User dapat memilih catatan dari daftar  
-- Data dikirim menggunakan noteId ke halaman detail  
-
-### 3. Tambah Catatan (FAB)
-- Menggunakan Floating Action Button (FAB)  
-- Mengarahkan ke halaman Add Note  
-
-### 4. Back Navigation
-- Navigasi kembali berjalan dengan baik di semua screen  
-- Tidak terjadi error saat berpindah halaman  
-
-### 5. Edit Note
-- User dapat mengedit catatan  
-- Data dikirim menggunakan noteId ke halaman edit  
+## 📌 Deskripsi
+Aplikasi **Notes App** ini merupakan pengembangan dari aplikasi sebelumnya dengan menambahkan fitur database lokal, pencarian, pengaturan, serta konsep offline-first.
+Aplikasi ini memungkinkan pengguna untuk membuat, mengedit, menghapus, dan mencari catatan dengan mudah serta tetap dapat digunakan tanpa koneksi internet.
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
-- Kotlin  
-- Android Studio  
-- Jetpack Navigation Component  
-- Material Design  
+## 🚀 Fitur Utama
+
+- ✅ Penyimpanan data menggunakan **SQLDelight**
+- ✅ CRUD (Create, Read, Update, Delete) Notes
+- ✅ Fitur pencarian (Search Notes)
+- ✅ Settings menggunakan **DataStore**
+  - Dark / Light Mode
+  - Sort Order
+- ✅ Offline-first (data tersimpan lokal)
+- ✅ UI State Handling:
+  - Loading
+  - Empty
+  - Content
 
 ---
 
-## ▶️ Cara Menjalankan Project
+## 🏗️ Teknologi yang Digunakan
 
-1. Buka project di Android Studio  
-2. Tunggu proses build (Gradle) selesai  
-3. Pilih device (emulator / HP)  
-4. Klik tombol Run ▶️  
+- Kotlin
+- Jetpack Compose
+- SQLDelight
+- DataStore Preferences
+- MVVM Architecture
 
 ---
+
+## 🗄️ Database Schema
+
+```sql
+CREATE TABLE notes (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
+```
+## 🚀 Cara Menjalankan Aplikasi
+1. Clone repository:
+   ```bash
+   git clone https://github.com/rdtngh/PraktikumPAM_123140125.git
+2. Buka project di Android Studio
+3. Sync Gradle
+4. Jalankan aplikasi di emulator atau device
 
 ## 📸 Screenshot Aplikasi
 
-### Notes Screen
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/14cd46b6-7491-4741-a456-ced23a183866" />
+### ➕ Add / Edit Note
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d36b2afc-b8b2-474f-90b2-7002d030acc8" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2366d279-e10f-4595-8f81-7feed14e5110" />
 
-### Add Note Screen
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8da0cd8-a3a4-4456-bc8b-e25158b80c38" />
+### 🔍 Search Notes
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1ae01c7f-a2af-48fb-ac60-be86e67aae19" />
 
-### Favourite Note Screen
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ce7cb91a-9fab-4032-8845-a6375a09c537" />
+### ⚙️ Settings
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f3993d5c-4a54-44bb-930d-bce0d5d03d0c" />
 
-### Bottom Navigation
-<img width="607" height="292" alt="image" src="https://github.com/user-attachments/assets/cf2d25a4-9150-4adb-a389-801a99610fec" />
-
-## Link Video Demonstrasi
-https://drive.google.com/file/d/1J_F_rwHSkwo4stz-pJ57wIAZ88ecycv9/view?usp=sharing
+### Video Demonstrasi
+https://s.itera.id/K5q2S8
