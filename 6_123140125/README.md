@@ -74,7 +74,11 @@ Video demonstrasi
 https://drive.google.com/file/d/1klbgakdW0dRb6ewrmBEqLySL_05H2dI7/view?usp=sharing
 =======
 ### Video Demonstrasi
+<<<<<<< HEAD
 https://drive.google.com/file/d/1klbgakdW0dRb6ewrmBEqLySL_05H2dI7/view?usp=sharing
 
 >>>>>>> 6f1d4c5e9c69eb4faf23ce9b974a9c9ae13b7336
+=======
+https://s.itera.id/fvwU0h
+>>>>>>> 847d0c84e95a6c329984fdea457db265bc98167b
 
