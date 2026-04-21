@@ -1,37 +1,71 @@
-# Tugas 2 PAM RB
-## News Feed Simulator
+# Tugas 5 Pengembangan Aplikasi Mobile RB 
 
-Nama  : Raditya Alrasyid Nugroho  
-NIM   : 123140125  
-Kelas : PAM RB  
+**Nama:** Raditya Alrasyid Nugroho  
+**NIM:** 123140125  
+**Kelas:** Pengembangan Aplikasi Mobile RB
+
+---
+# 📱 Notes App (Android)
+
+## Deskripsi
+Aplikasi ini merupakan aplikasi pencatatan sederhana berbasis Android.  
+---
+
+## ✨ Fitur Utama
+
+### 1. Bottom Navigation (3 Tab)
+- Notes → menampilkan daftar catatan  
+- Favorites → menampilkan catatan favorit  
+- Profile → halaman profil pengguna  
+
+### 2. Note List → Note Detail
+- User dapat memilih catatan dari daftar  
+- Data dikirim menggunakan noteId ke halaman detail  
+
+### 3. Tambah Catatan (FAB)
+- Menggunakan Floating Action Button (FAB)  
+- Mengarahkan ke halaman Add Note  
+
+### 4. Back Navigation
+- Navigasi kembali berjalan dengan baik di semua screen  
+- Tidak terjadi error saat berpindah halaman  
+
+### 5. Edit Note
+- User dapat mengedit catatan  
+- Data dikirim menggunakan noteId ke halaman edit  
 
 ---
 
-## 📌 Deskripsi Aplikasi
-News Feed Simulator adalah aplikasi berbasis Kotlin yang mensimulasikan aliran berita (news feed) menggunakan Kotlin Flow, StateFlow, dan Coroutines.
-Aplikasi ini menghasilkan berita baru setiap 2 detik, menyediakan fitur filter berdasarkan kategori, melakukan transformasi data sebelum ditampilkan, serta menyimpan jumlah berita yang telah dibaca menggunakan StateFlow. Pengambilan detail berita dilakukan secara asynchronous menggunakan coroutine.
+## 🛠️ Teknologi yang Digunakan
+- Kotlin  
+- Android Studio  
+- Jetpack Navigation Component  
+- Material Design  
 
 ---
 
-## 🚀 Fitur yang Diimplementasikan
+## ▶️ Cara Menjalankan Project
 
-1. Flow yang mensimulasikan data berita baru setiap 2 detik  
-2. Filter berita berdasarkan kategori tertentu  
-3. Transformasi data menjadi format yang ditampilkan  
-4. StateFlow untuk menyimpan jumlah berita yang sudah dibaca  
-5. Coroutine untuk mengambil detail berita secara asynchronous  
-
----
-
-## 🛠 Teknologi yang Digunakan
-- Kotlin
-- Kotlin Coroutines
-- Flow
-- StateFlow
+1. Buka project di Android Studio  
+2. Tunggu proses build (Gradle) selesai  
+3. Pilih device (emulator / HP)  
+4. Klik tombol Run ▶️  
 
 ---
 
-## Screenshot Tampilan Program
-![Tugas pam2](https://github.com/user-attachments/assets/3251f9e2-97dc-455f-a4de-10506a1f8840)
+## 📸 Screenshot Aplikasi
 
+### Notes Screen
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ed1abc3-a8d3-47e0-9af6-86fe96eeb3e5" />
 
+### Add Note Screen
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b92c4a44-1e5e-4bf8-af38-a9dd3a808775" />
+
+### Favourite Note Screen
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bc15de4a-288d-4db0-97c1-fadbd2043ca2" />
+
+### Bottom Navigation
+<img width="642" height="186" alt="image" src="https://github.com/user-attachments/assets/23f00571-9767-482e-ab4d-b07acf527f7c" />
+
+## Link Video Demonstrasi
+https://s.itera.id/0elZ7P
