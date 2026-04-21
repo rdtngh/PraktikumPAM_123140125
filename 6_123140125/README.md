@@ -70,6 +70,5 @@ Aplikasi **News Reader** adalah aplikasi mobile yang menampilkan daftar berita d
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/40a4e9db-6347-41f9-9e82-d5cd9c1b83fd" />
 
 ### Video Demonstrasi
-https://drive.google.com/file/d/1klbgakdW0dRb6ewrmBEqLySL_05H2dI7/view?usp=sharing
-
+https://s.itera.id/fvwU0h
 
