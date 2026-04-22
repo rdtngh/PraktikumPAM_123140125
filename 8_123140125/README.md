@@ -1,72 +1,73 @@
-# Tugas 7 Pengembangan Aplikasi Mobile RB 
+# Tugas 8 Pengembangan Aplikasi Mobile RB 
 
 **Nama:** Raditya Alrasyid Nugroho  
 **NIM:** 123140125  
 **Kelas:** Pengembangan Aplikasi Mobile RB
 
-# 📱 Notes App - Praktikum Minggu 7
+# 📱 Tugas Praktikum Minggu 8 - Platform Specific Features
+## 📌 Deskripsi Tugas
+Pada tugas ini dilakukan pengembangan aplikasi Notes App dengan menambahkan fitur platform-specific menggunakan pendekatan Dependency Injection (Koin) serta implementasi fitur device dan network.
 
-## 📌 Deskripsi
-Aplikasi **Notes App** ini merupakan pengembangan dari aplikasi sebelumnya dengan menambahkan fitur database lokal, pencarian, pengaturan, serta konsep offline-first.
-Aplikasi ini memungkinkan pengguna untuk membuat, mengedit, menghapus, dan mencari catatan dengan mudah serta tetap dapat digunakan tanpa koneksi internet.
+## 🎯 Tujuan
+- Mengimplementasikan Dependency Injection menggunakan Koin
+- Mengakses informasi perangkat (Device Info)
+- Mendeteksi status jaringan (Network Monitor)
+- Menampilkan informasi device dan status network di UI
+
+---
+## ⚙️ Fitur yang Diimplementasikan
+
+### 1. Dependency Injection (Koin)
+- Menggunakan Koin untuk mengelola dependency
+- Semua dependency di-inject melalui module Koin
+
+### 2. Device Info (Expect/Actual)
+- Menggunakan konsep `expect/actual`
+- Menampilkan informasi device seperti:
+  - OS
+  - Versi
+  - Device Name
+
+### 3. Network Monitor (Expect/Actual)
+- Mendeteksi status jaringan (Online / Offline)
+- Implementasi berbeda untuk setiap platform
+
+### 4. Settings Screen
+- Menampilkan informasi device
+- UI sederhana untuk menampilkan data device
+
+### 5. Network Status Indicator
+- Indikator status network pada main screen
+- Update secara real-time
 
 ---
 
-## 🚀 Fitur Utama
-
-- ✅ Penyimpanan data menggunakan **SQLDelight**
-- ✅ CRUD (Create, Read, Update, Delete) Notes
-- ✅ Fitur pencarian (Search Notes)
-- ✅ Settings menggunakan **DataStore**
-  - Dark / Light Mode
-  - Sort Order
-- ✅ Offline-first (data tersimpan lokal)
-- ✅ UI State Handling:
-  - Loading
-  - Empty
-  - Content
+## 🏗️ Arsitektur
+Aplikasi menggunakan pendekatan modular dengan:
+- Presentation Layer (UI)
+- Domain Layer
+- Data Layer
+- Dependency Injection (Koin)
 
 ---
 
-## 🏗️ Teknologi yang Digunakan
+## 📸 Screenshot
 
-- Kotlin
-- Jetpack Compose
-- SQLDelight
-- DataStore Preferences
-- MVVM Architecture
+### Device Info
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69dbb6e6-6e7a-441b-a10d-554b0d315edb" />
 
----
+### Network Indicator
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2337e24a-de90-445a-aa0a-66fc793b658b" />
 
-## 🗄️ Database Schema
+## 🚀 Cara Menjalankan Project
 
-```sql
-CREATE TABLE notes (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-    content TEXT NOT NULL,
-    created_at TEXT NOT NULL
-);
+### 1. Clone repository:
+```bash
+git clone https://github.com/username/repository.git
 ```
-## 🚀 Cara Menjalankan Aplikasi
-1. Clone repository:
-   ```bash
-   git clone https://github.com/rdtngh/PraktikumPAM_123140125.git
-2. Buka project di Android Studio
-3. Sync Gradle
-4. Jalankan aplikasi di emulator atau device
+### 2. Buka project di Android Studio
+### 3. Sync Gradle
+### 4. Jalankan aplikasi di emulator / device
 
-## 📸 Screenshot Aplikasi
-
-### ➕ Add / Edit Note
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d36b2afc-b8b2-474f-90b2-7002d030acc8" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2366d279-e10f-4595-8f81-7feed14e5110" />
-
-### 🔍 Search Notes
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1ae01c7f-a2af-48fb-ac60-be86e67aae19" />
-
-### ⚙️ Settings
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f3993d5c-4a54-44bb-930d-bce0d5d03d0c" />
-
-### Video Demonstrasi
-https://s.itera.id/K5q2S8
+## 🎥 Video Demo
+https://s.itera.id/6k3Cdu
