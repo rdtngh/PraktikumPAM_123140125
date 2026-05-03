@@ -32,10 +32,10 @@ val appModule = module {
     
     // AI Services
     single {
-        val apiKey = "AIzaSyCNUy72iO7pReGIdBsA1nM9LYUTF3nJp8Q"
+        val apiKey = "AIzaSyB2vdIx2z3Wgp3Oy52arpY93coCi2PkKbI"
         GenerativeModel(
-            // Menggunakan gemini-pro sebagai model yang paling stabil
-            modelName = "gemini-pro",
+            // Menggunakan model gemini-2.5-flash sesuai screenshot terbaru
+            modelName = "gemini-2.5-flash",
             apiKey = apiKey,
             generationConfig = generationConfig {
                 temperature = 0.7f

@@ -130,12 +130,12 @@ fun NoteDetailScreen(
                 }
             },
             text = {
-                Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     // Response Area
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .heightIn(min = 100.dp, max = 300.dp)
+                            .heightIn(min = 100.dp, max = 250.dp)
                             .clip(RoundedCornerShape(16.dp))
                             .background(Color.White.copy(alpha = 0.05f))
                             .padding(12.dp)
@@ -177,7 +177,19 @@ fun NoteDetailScreen(
                         value = userQuestion,
                         onValueChange = { userQuestion = it },
                         modifier = Modifier.fillMaxWidth(),
-                        placeholder = { Text("Tanya AI...", color = Color.Gray) },
+                        placeholder = { 
+                            Text(
+                                "Tanya AI...", 
+                                color = Color.Gray,
+                                fontSize = 14.sp
+                            ) 
+                        },
+                        textStyle = LocalTextStyle.current.copy(
+                            color = Color.White,
+                            fontSize = 14.sp,
+                            lineHeight = 20.sp
+                        ),
+                        singleLine = true,
                         trailingIcon = {
                             IconButton(onClick = { 
                                 if (userQuestion.isNotBlank()) {
@@ -191,7 +203,8 @@ fun NoteDetailScreen(
                             focusedTextColor = Color.White,
                             unfocusedTextColor = Color.White,
                             focusedBorderColor = ElectricBlue,
-                            unfocusedBorderColor = GlassBorder
+                            unfocusedBorderColor = GlassBorder,
+                            cursorColor = ElectricBlue
                         ),
                         shape = RoundedCornerShape(16.dp)
                     )

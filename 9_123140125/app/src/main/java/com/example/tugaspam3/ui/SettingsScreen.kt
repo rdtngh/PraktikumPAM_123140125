@@ -89,6 +89,21 @@ fun SettingsScreen(
 
             Divider()
 
+            Text("AI Configuration", style = MaterialTheme.typography.titleMedium)
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+                )
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    DeviceInfoItem("Active Model", "Gemini 1.5 Flash")
+                    DeviceInfoItem("Status", "Ready")
+                }
+            }
+
+            Divider()
+
             Text("Device Information", style = MaterialTheme.typography.titleMedium)
             
             Card(
@@ -105,7 +120,6 @@ fun SettingsScreen(
                 }
             }
             
-            // Tambahkan space di bawah agar tidak tertutup bottom bar (jika ada)
             Spacer(modifier = Modifier.height(32.dp))
         }
     }
