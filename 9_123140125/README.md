@@ -1,30 +1,129 @@
-# Catatan Pintar AI (Tugas Praktikum)
+# Tugas 9 Pengembangan Aplikasi Mobile RB 
 
-Aplikasi manajemen catatan yang ditingkatkan dengan integrasi kecerdasan buatan (Gemini AI).
+**Nama:** Raditya Alrasyid Nugroho  
+**NIM:** 123140125  
+**Kelas:** Pengembangan Aplikasi Mobile RB
 
-## Fitur AI Utama
+# AI Integration App
+## Deskripsi
+Project Android dengan integrasi AI menggunakan Gemini API/OpenAI API untuk menambahkan fitur chatbot assistant pada aplikasi.
 
-### 1. Content Summarization (Ringkasan Catatan)
-Meringkas isi catatan yang panjang secara otomatis menjadi poin-poin penting yang mudah dibaca.
-- **Teknologi**: Google Gemini AI (gemini-1.5-flash).
-- **Manfaat**: Menghemat waktu dalam meninjau catatan panjang.
+## Fitur
+- AI Chat Assistant
+- Multi-turn conversation
+- Loading state
+- Error handling
+- Responsive UI
+- Structured prompt engineering
 
-### 2. Smart System Prompt
-Menggunakan prompt sistem yang dirancang secara khusus untuk memastikan AI memberikan jawaban yang relevan, ramah, dan dalam Bahasa Indonesia.
+---
 
-## Persyaratan Teknis yang Dipenuhi
+# Teknologi
 
-- [x] **Integrasi Gemini API**: Menggunakan model terbaru `gemini-1.5-flash`.
-- [x] **Error Handling**: Implementasi penanganan error yang baik jika koneksi internet terputus atau API bermasalah.
-- [x] **UI Responsif & Loading States**: Menggunakan `CircularProgressIndicator` dan dialog material 3 untuk memberikan umpan balik visual saat AI sedang bekerja.
-- [x] **System Prompt Well-designed**: AI bertindak sebagai asisten catatan profesional.
-- [x] **Dokumentasi README**: Fitur dijelaskan secara rinci di sini.
+- Kotlin
+- Jetpack Compose
+- MVVM Architecture
+- Retrofit
+- Coroutines
+- Gemini API / OpenAI API
 
-## Cara Penggunaan
-1. Buka salah satu catatan yang ada.
-2. Klik ikon ✨ (Magic/AI) di bilah navigasi atas.
-3. Tunggu proses AI selesai (ditandai dengan loading indicator).
-4. Hasil ringkasan akan muncul dalam dialog.
+---
 
-## Konfigurasi
-Untuk menjalankan fitur AI, pastikan Anda telah memasukkan `API_KEY` di file `AppModule.kt`.
+# Implementasi AI
+
+Aplikasi menggunakan API AI melalui service layer dengan alur:
+
+```text
+UI → ViewModel → Repository → API Service
+```
+
+Contoh system prompt:
+
+```text
+You are a helpful AI assistant inside a mobile application.
+Provide concise and relevant answers for users.
+```
+
+---
+
+# Error Handling
+
+Aplikasi menangani:
+- No internet connection
+- API timeout
+- Empty response
+- Invalid request
+
+Implementasi:
+- Try-catch
+- Error state UI
+- Retry mechanism
+
+---
+
+# UI/UX
+
+Fitur UI:
+- Loading indicator
+- Responsive chat screen
+- Error message feedback
+- Auto scroll chat
+
+---
+
+# Struktur Folder
+
+```bash
+app/
+├── data/
+├── network/
+├── ui/
+├── viewmodel/
+└── repository/
+```
+
+---
+
+# Menjalankan Project
+
+## Clone Repository
+
+```bash
+git clone https://github.com/username/project-name.git
+```
+
+## Tambahkan API Key
+
+Pada file `local.properties`
+
+```properties
+GEMINI_API_KEY=your_api_key
+```
+
+atau
+
+```properties
+OPENAI_API_KEY=your_api_key
+```
+
+---
+
+# Run App
+
+```bash
+./gradlew installDebug
+```
+
+---
+
+# Penilaian Tugas
+
+| Kriteria | Status |
+|----------|---------|
+| AI Integration | ✅ |
+| Prompt Engineering | ✅ |
+| Error Handling | ✅ |
+| UI/UX | ✅ |
+| Clean Architecture | ✅ |
+
+---
